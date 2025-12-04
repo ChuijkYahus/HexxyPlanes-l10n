@@ -53,6 +53,8 @@ caelus = "3.1.0+1.20"
 asm = "9.5"
 shadow = "7.1.2"
 modPublish = "1.0.0"
+infiniverse = "2.0.0.1"
+fantasy = "0.4.11+1.20-rc1"
 
 [bundles]
 asm = ["asm", "asm-analysis", "asm-commons", "asm-tree", "asm-util"]
@@ -63,6 +65,10 @@ kotlin-fabric = { module="net.fabricmc:fabric-language-kotlin", version.ref="kot
 kotlin-forge  = { module="thedarkcolour:kotlinforforge", version.ref="kotlin-forge" }
 
 minecraft = { module="com.mojang:minecraft", version.ref="minecraft" }
+
+# dim handling
+infiniverse = { module="net.commoble.infiniverse:infiniverse-1.20.4", version.ref="infiniverse" }
+fantasy = { module="xyz.nucleoid:fantasy", version.ref="fantasy" }
 
 parchment = { module="org.parchmentmc.data:parchment-1.20.1", version.ref="parchment" }
 

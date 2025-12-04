@@ -60,6 +60,10 @@ hexxyplanesModDependencies {
     requires("kotlin-for-forge")
 }
 
+repositories {
+    maven("https://maven.commoble.net/")
+}
+
 dependencies {
     forge(libs.forge)
     modApi(libs.architectury.forge)
@@ -86,6 +90,8 @@ dependencies {
         localRuntime(it)
         include(it)
     }
+
+    modImplementation(files("../libs/infiniverse-1.20.1-1.0.0.5.jar"))
 }
 
 tasks {
