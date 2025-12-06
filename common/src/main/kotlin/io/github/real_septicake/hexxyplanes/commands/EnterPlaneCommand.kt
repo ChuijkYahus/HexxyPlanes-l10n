@@ -6,14 +6,14 @@ import net.minecraft.commands.CommandSourceStack
 import net.minecraft.commands.Commands
 import net.minecraft.commands.arguments.EntityArgument
 
-object CreatePlaneCommand : HexxyplanesCommand() {
+object EnterPlaneCommand : HexxyplanesCommand() {
     override fun add(cmd: LiteralArgumentBuilder<CommandSourceStack>) {
-        cmd.then(Commands.literal("genPlane")
+        cmd.then(Commands.literal("enterPlane")
             .then(Commands.argument("for", EntityArgument.player())
                 .executes {
                     val p = EntityArgument.getPlayer(it, "for")
                     val world = it.source.server.getLevel(HexxyplanesDimension.WORLD_KEY) ?: return@executes 0
-                    HexxyplanesDimension.repairPlane(world, p.uuid)
+                    HexxyplanesDimension.goToPlane(world, it.source.playerOrException, p.uuid)
                     1
                 }
             )

@@ -1,0 +1,7 @@
+{
+  name: "no",
+  category: "hexcasting:pattern/spells",
+  icon: "hexxyplanes:barrier",
+  advancement: "hexcasting:root",
+  pages: []
+}

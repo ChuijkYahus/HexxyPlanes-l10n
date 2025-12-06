@@ -20,6 +20,11 @@ object HexxyplanesBlocks : HexxyplanesRegistrar<Block>(
             .pushReaction(PushReaction.BLOCK))
     }
 
+    val BARRIER_SPAWN = blockItem("barrier_spawn", ItemProperties().stacksTo(64).fireResistant()) {
+        Block(BlockProperties.copy(Blocks.DEEPSLATE_TILES).strength(Block.INDESTRUCTIBLE)
+            .pushReaction(PushReaction.BLOCK))
+    }
+
     private fun <T : Block> blockItem(name: String, props: ItemProperties, builder: () -> T) =
         make(name, builder) { BlockItem(it, props) }
 
