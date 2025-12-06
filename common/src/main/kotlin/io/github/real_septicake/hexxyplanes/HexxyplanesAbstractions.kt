@@ -4,8 +4,6 @@ package io.github.real_septicake.hexxyplanes
 
 import dev.architectury.injectables.annotations.ExpectPlatform
 import io.github.real_septicake.hexxyplanes.registry.HexxyplanesRegistrar
-import net.minecraft.resources.ResourceLocation
-import net.minecraft.server.MinecraftServer
 
 fun initRegistries(vararg registries: HexxyplanesRegistrar<*>) {
     for (registry in registries) {
@@ -15,10 +13,5 @@ fun initRegistries(vararg registries: HexxyplanesRegistrar<*>) {
 
 @ExpectPlatform
 fun <T : Any> initRegistry(registrar: HexxyplanesRegistrar<T>) {
-    throw AssertionError()
-}
-
-@ExpectPlatform
-fun getOrMakeDim(server: MinecraftServer, id: ResourceLocation) {
     throw AssertionError()
 }

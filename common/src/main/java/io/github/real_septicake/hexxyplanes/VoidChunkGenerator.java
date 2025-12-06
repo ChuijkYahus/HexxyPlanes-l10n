@@ -1,4 +1,4 @@
-package io.github.real_septicake.hexxyplanes.forge;
+package io.github.real_septicake.hexxyplanes;
 
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.Codec;

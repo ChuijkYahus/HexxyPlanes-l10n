@@ -6,6 +6,7 @@
   "client": [
   ],
   "mixins": [
+    "CastingEnvironmentMixin",
     "MixinDatagenMain"
   ],
   "plugin": "io.github.real_septicake.hexxyplanes.mixin.HexxyplanesMixinConfigPlugin",

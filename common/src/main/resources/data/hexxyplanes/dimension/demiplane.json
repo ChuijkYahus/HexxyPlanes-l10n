@@ -1,0 +1,7 @@
+{
+  "generator": {
+    "type": "hexxyplanes:void",
+    "biome": "minecraft:the_void"
+  },
+  "type": "hexxyplanes:demiplane"
+}

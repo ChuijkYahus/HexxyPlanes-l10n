@@ -1,6 +1,5 @@
 package io.github.real_septicake.hexxyplanes.registry
 
-import io.github.real_septicake.hexxyplanes.blocks.PlaneBarrierBlock
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.core.registries.Registries
 import net.minecraft.world.item.BlockItem
@@ -17,7 +16,7 @@ object HexxyplanesBlocks : HexxyplanesRegistrar<Block>(
     { BuiltInRegistries.BLOCK }
 ) {
     val BARRIER = blockItem("barrier", ItemProperties().stacksTo(64).fireResistant()) {
-        PlaneBarrierBlock(BlockProperties.copy(Blocks.DEEPSLATE_TILES).strength(Block.INDESTRUCTIBLE)
+        Block(BlockProperties.copy(Blocks.DEEPSLATE_TILES).strength(Block.INDESTRUCTIBLE)
             .pushReaction(PushReaction.BLOCK))
     }
 
