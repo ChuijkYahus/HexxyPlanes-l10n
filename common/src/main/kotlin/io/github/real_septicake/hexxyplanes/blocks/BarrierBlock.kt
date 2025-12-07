@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.state.BlockState
 
 class BarrierBlock(props: Properties) : Block(props) {
     override fun attack(state: BlockState, level: Level, pos: BlockPos, player: Player) {
-        if(!level.isClientSide){ HexxyplanesDimension.exitPlane(level as ServerLevel, player as ServerPlayer) }
+        if(!level.isClientSide && !player.isCrouching){ HexxyplanesDimension.exitPlane(level as ServerLevel, player as ServerPlayer) }
     }
 
     override fun destroy(level: LevelAccessor, pos: BlockPos, state: BlockState) {
