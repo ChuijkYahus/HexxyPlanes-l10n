@@ -5,6 +5,7 @@ import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.getVec3
 import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.mishaps.MishapBadCaster
+import at.petrak.hexcasting.api.casting.mishaps.MishapBadLocation
 import at.petrak.hexcasting.api.misc.MediaConstants
 import io.github.real_septicake.hexxyplanes.DemiplaneExit
 import io.github.real_septicake.hexxyplanes.setExit
@@ -20,7 +21,8 @@ object OpPlaneExit : ConstMediaAction {
         val dest = args.getVec3(0, argc)
         if(env.castingEntity !is ServerPlayer)
             throw MishapBadCaster()
-        setExit(env.castingEntity as ServerPlayer, DemiplaneExit(env.world.dimension(), BlockPos(dest.toVecI())))
+        if(!setExit(env.castingEntity as ServerPlayer, DemiplaneExit(env.world.dimension(), BlockPos(dest.toVecI()))))
+            throw MishapBadLocation(dest, "bad_dimension")
         return listOf()
     }
 }
