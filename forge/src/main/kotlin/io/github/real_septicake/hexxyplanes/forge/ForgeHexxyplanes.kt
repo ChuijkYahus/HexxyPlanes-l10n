@@ -10,6 +10,7 @@ import net.minecraftforge.event.entity.player.PlayerEvent
 import io.github.real_septicake.hexxyplanes.forge.capabilities.IDemiplaneExit
 import io.github.real_septicake.hexxyplanes.forge.datagen.ForgeHexxyplanesDatagen
 import net.minecraft.server.level.ServerPlayer
+import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.player.Player
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.common.capabilities.Capability
@@ -45,11 +46,12 @@ class ForgeHexxyplanes {
                     HexxyplanesDimension.goToPlane(evt.entity.server!!.getLevel(HexxyplanesDimension.WORLD_KEY)!!, evt.entity!! as ServerPlayer, evt.entity.uuid)
                 }
             }
-            addGenericListener(Player::class.java) { evt: AttachCapabilitiesEvent<Player> ->
-                evt.addCapability(
-                    DemiplaneExitAttacher.IDENTIFIER,
-                    DemiplaneExitAttacher.DemiplaneExitProvider()
-                )
+            addGenericListener(Entity::class.java) { evt: AttachCapabilitiesEvent<Entity> ->
+                if(evt.`object` is Player)
+                    evt.addCapability(
+                        DemiplaneExitAttacher.IDENTIFIER,
+                        DemiplaneExitAttacher.DemiplaneExitProvider()
+                    )
             }
             addListener { evt: PlayerEvent.Clone ->
                 if(evt.isWasDeath) {
