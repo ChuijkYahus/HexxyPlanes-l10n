@@ -55,8 +55,9 @@ class ForgeHexxyplanes {
             }
             addListener { evt: PlayerEvent.Clone ->
                 if(evt.isWasDeath) {
+                    evt.original.reviveCaps()
                     evt.entity.getCapability(DEMIPLANE_EXIT_CAPABILITY)
-                        .resolve().orElseGet { DemiplaneExitCapability() }
+                        .resolve().orElse(DemiplaneExitCapability())
                         .exit = evt.original.getCapability(DEMIPLANE_EXIT_CAPABILITY)
                         .resolve().orElse(DemiplaneExitCapability()).exit
                 }
