@@ -11,7 +11,6 @@ import io.github.real_septicake.hexxyplanes.HexxyplanesDimension
 import io.github.real_septicake.hexxyplanes.casting.mishaps.MishapNotInDemiplane
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.entity.Entity
-import net.minecraft.world.entity.player.Player
 
 object OpPlaneBanish : SpellAction {
     override val argc = 1
@@ -26,7 +25,7 @@ object OpPlaneBanish : SpellAction {
 
         return SpellAction.Result(
             Spell(entity, env.castingEntity as ServerPlayer),
-            if(entity is Player) MediaConstants.CRYSTAL_UNIT * 5 else MediaConstants.SHARD_UNIT * 5,
+            MediaConstants.SHARD_UNIT * 5,
             listOf()
         )
     }

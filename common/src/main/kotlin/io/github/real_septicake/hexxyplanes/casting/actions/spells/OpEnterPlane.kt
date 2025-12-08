@@ -27,9 +27,7 @@ object OpEnterPlane : SpellAction {
             if(HexxyplanesDimension.WORLD_KEY == target.level().dimension())
                 MediaConstants.DUST_UNIT * 5
             else {
-                MediaConstants.CRYSTAL_UNIT * 10 *
-                        if(target is ServerPlayer)
-                            5 else 1
+                MediaConstants.SHARD_UNIT * 10
             },
             listOf()
         )
