@@ -7,8 +7,9 @@
             "": "Demiplanes",
             get_plane: "Retrieves an iota representing my Demiplane.",
             enter_plane: {
-              "1": "Sends me to the provided demiplane. Costs 10 charged amethyst \
-              if not already in a demiplane, costing 5 dust otherwise.",
+              "1": "Sends the target to the provided demiplane. Costs 10 \
+              charged amethyst if not already in a demiplane, 50 if the \
+              target is a player, and costing 5 dust otherwise.",
               "2": "Upon entering a plane, the two blocks on the spawn point are \
               broken, as if by a player, and any fragile  blocks $(l)are not \
               dropped./$ The spawn point is signified by a purple tinted version \
@@ -16,8 +17,22 @@
             },
             exit_plane: "Removes me from the demiplane, placing me back at my spawn. \
             This same effect can be accomplished by punching the walls that line the \
-            plane.",
+            plane. This spell mishaps if not currently in a demiplane",
             plane_pos: "Gets the spawn position within this plane as a vector",
+            plane_banish: {
+              "1": "Forces the target out of the demiplane, costing 5 charged \
+              amethyst if the target is a player, and 5 shards otherwise. Mishaps if \
+              not currently in a demiplane.",
+              "2": "If the target is a player, they are sent to their demiplane exit. \
+              If the target is any other entity, they are sent to my demiplane exit. \
+              The exit can be set using $(l:patterns/spells/demiplane#hexxyplanes:plane_exit)\
+              $(action)Planar Marking/$."
+            },
+            plane_exit: "Marks the target location as your exit for the demiplane, \
+            casuing you to be sent there upon using $(l:patterns/spells/demiplane\
+            #hexxyplanes:exit_plane)$(action)Planar Excursion/$ and for non-player \
+            entities to be sent there when using $(l:patterns/spells/demiplane#\
+            hexxyplanes:plane_banish)$(action)Planar Expulsion/$."
           },
         },
       },
@@ -35,8 +50,10 @@
       "hexxyplanes:": {
         get_plane: "Planar Reflection",
         enter_plane: "Planar Intrusion",
-        exit_plane: "Planar Expulsion",
-        plane_pos: "Planar Purification"
+        exit_plane: "Planar Excursion",
+        plane_pos: "Planar Purification",
+        plane_banish: "Planar Expulsion",
+        plane_exit: "Planar Marking"
       },
 
       // use this to add shortened versions of pattern names if the full name won't fit in the ingame book

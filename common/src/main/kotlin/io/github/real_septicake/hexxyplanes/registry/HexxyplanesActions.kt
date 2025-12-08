@@ -19,7 +19,7 @@ object HexxyplanesActions : HexxyplanesRegistrar<ActionRegistryEntry>(
     val PLANE_POS = make("plane_pos", HexDir.NORTH_EAST, "dwawdaqqwwqq") { OpPlanePosition }
     val ENTER_PLANE = make("enter_plane", HexDir.NORTH_EAST, "dwawdeewedwwqqqwwqq") { OpEnterPlane }
     val EXIT_PLANE = make("exit_plane", HexDir.NORTH_EAST, "dwawddww") { OpExitPlane }
-    val PLANE_KIDNAP = make("plane_kidnap", HexDir.NORTH_EAST, "dwawdqaqwwwqa") { OpPlaneKidnap }
+    val PLANE_EXIT = make("plane_exit", HexDir.NORTH_EAST, "dwawdqaqwwwqa") { OpPlaneExit }
     val PLANE_BANISH = make("plane_banish", HexDir.NORTH_EAST, "dwawdeewe") { OpPlaneBanish }
 
     private fun make(name: String, startDir: HexDir, signature: String, getAction: () -> Action) = register(name) {
