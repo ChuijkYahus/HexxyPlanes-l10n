@@ -38,6 +38,27 @@
           },
         },
       },
+      info: {
+        demiplane: {
+          "": "Demiplanes",
+          "text": {
+            "1": "Since pushing past the barrier and seeing a realm of thought, \
+            I wondered what else may be accessible by simply... applying some \
+            more pressure. After doing so I saw a reality of cubes upon cubes \
+            upon cubes, containers of pure white waiting for someone to inhabit \
+            them. I managed to devise some patterns to force my way into this \
+            plane, and upon following through I found myself inside one of these \
+            cubes.",
+            "2": "I felt my media expand to fill the space, but it curiously \
+            refused to go any further than the walls that surround me. I feel as \
+            though I can safely assume that this area is entirely my own, although \
+            it doesn't seem to take kindly to remodeling, as punching the walls \
+            resulted in me being shunted back to reality (maybe being more careful \
+            would prevent this next time?). The block at the position I enter this \
+            plane at is oddly discoloured, convenient for keeping my heading I suppose."
+          }
+        }
+      }
     },
     tooltip: {
       demiplane: "Demiplane"
