@@ -91,6 +91,8 @@ jobs:
               'https://cdn.modrinth.com/data/nU0bVIaL/versions/Y6tuH1cn/Patchouli-1.20.1-84-FABRIC.jar'
               'https://cdn.modrinth.com/data/mOgUt4GM/versions/zv46i3PW/modmenu-7.1.0.jar'
               'https://cdn.modrinth.com/data/5aaWibi9/versions/z8ProfKL/trinkets-3.7.0.jar'
+              'https://cdn.modrinth.com/data/e0M1UDsY/versions/9fUQXa48/collective-1.20.1-8.13.jar'
+              'https://cdn.modrinth.com/data/Rm4OOdHd/versions/hJuIowdr/hideexperimentalwarning-1.20.1-1.2.jar'
           - modloader: forge
             fabric-api: none
             mc-runtime-test: lexforge
@@ -103,6 +105,8 @@ jobs:
               'https://cdn.modrinth.com/data/fin1PX4m/versions/huiPd6Lc/inline-forge-1.20.1-1.0.1.jar'
               'https://cdn.modrinth.com/data/40FYwb4z/versions/fs9CeXYZ/caelus-forge-3.1.0%2B1.20.jar'
               'https://cdn.modrinth.com/data/nU0bVIaL/versions/JMtc0mTS/Patchouli-1.20.1-84-FORGE.jar'
+              'https://cdn.modrinth.com/data/e0M1UDsY/versions/9fUQXa48/collective-1.20.1-8.13.jar'
+              'https://cdn.modrinth.com/data/Rm4OOdHd/versions/hJuIowdr/hideexperimentalwarning-1.20.1-1.2.jar'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-java@v4
