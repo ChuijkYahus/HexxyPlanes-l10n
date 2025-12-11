@@ -3,6 +3,7 @@ package io.github.real_septicake.hexxyplanes
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironmentComponent
 import io.github.real_septicake.hexxyplanes.Hexxyplanes.chunkFromUUID
+import io.github.real_septicake.hexxyplanes.HexxyplanesDimension.PLANE_SIZE
 import io.github.real_septicake.hexxyplanes.HexxyplanesDimension.WORLD_KEY
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.phys.Vec3
@@ -16,12 +17,10 @@ class HexplaneComponent(val env: CastingEnvironment) : CastingEnvironmentCompone
             if (env.castingEntity is ServerPlayer) {
                 val chunkPos = chunkFromUUID((env.castingEntity as ServerPlayer).uuid)
                 val inside =
-                    vec!!.x >= chunkPos.minBlockX + 1 && vec.x <= chunkPos.minBlockX + 11 &&
-                            vec.z >= chunkPos.minBlockZ + 1 && vec.z <= chunkPos.minBlockZ + 11 &&
-                            vec.y >= 1 && vec.y <= 11
+                    vec!!.x >= chunkPos.minBlockX && vec.x <= chunkPos.minBlockX + PLANE_SIZE &&
+                            vec.z >= chunkPos.minBlockZ && vec.z <= chunkPos.minBlockZ + PLANE_SIZE &&
+                            vec.y >= 0 && vec.y <= PLANE_SIZE
                 return inside
-            } else {
-                return false
             }
         }
         return current
