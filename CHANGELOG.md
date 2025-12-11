@@ -10,6 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Commands did not abide by permissions
 
+### Added
+
+- A pattern for showing your hexplane exit (Reveal Mark)
+- The ability to reset your hexplane exit by passing null to Planar Marking
+
 ## 0.1.1
 
 ### Fixed
