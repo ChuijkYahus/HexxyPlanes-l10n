@@ -4,12 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
-## 0.1.2
+## 0.2.0
 
 ### Fixed
 
-- Commands did not abide by permissions
+- Commands now abides by permissions
 - Planar Intrusion now respects Hex Casting's `cannot_teleport` tag
+- Hexplane Iota now properly colors owner name
 
 ### Added
 
