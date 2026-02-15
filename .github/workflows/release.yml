@@ -119,7 +119,7 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
 
   publish-maven:
-    needs: publish_mod
+    needs: publish-mod
     if: inputs.publish_maven
     runs-on: ubuntu-latest
     environment:
