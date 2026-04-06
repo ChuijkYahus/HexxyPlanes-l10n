@@ -1,5 +1,6 @@
 package io.github.real_septicake.hexxyplanes.forge
 
+import dev.architectury.platform.Platform
 import dev.architectury.platform.forge.EventBuses
 import io.github.real_septicake.hexxyplanes.Hexxyplanes
 import io.github.real_septicake.hexxyplanes.HexxyplanesCommands
@@ -9,6 +10,7 @@ import io.github.real_septicake.hexxyplanes.forge.capabilities.HexplaneExitCapab
 import net.minecraftforge.event.entity.player.PlayerEvent
 import io.github.real_septicake.hexxyplanes.forge.capabilities.IHexplaneExit
 import io.github.real_septicake.hexxyplanes.forge.datagen.ForgeHexxyplanesDatagen
+import io.github.real_septicake.hexxyplanes.forge.interop.oneironaut.OneironautCompat
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.player.Player
@@ -30,6 +32,8 @@ class ForgeHexxyplanes {
     }
 
     init {
+        if(Platform.isModLoaded("oneironaut"))
+            OneironautCompat.load()
         MOD_BUS.apply {
             EventBuses.registerModEventBus(Hexxyplanes.MODID, this)
             addListener(ForgeHexxyplanesClient::init)

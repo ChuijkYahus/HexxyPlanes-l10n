@@ -1,4 +1,4 @@
-package io.github.real_septicake.hexxyplanes.fabric.interop.oneironaut.casting.actions
+package io.github.real_septicake.hexxyplanes.forge.interop.oneironaut.casting.actions
 
 import at.petrak.hexcasting.api.casting.castables.ConstMediaAction
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
@@ -6,9 +6,9 @@ import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.iota.Vec3Iota
 import at.petrak.hexcasting.api.casting.mishaps.MishapBadCaster
 import io.github.real_septicake.hexxyplanes.HexplaneExit
-import io.github.real_septicake.hexxyplanes.fabric.getExit
-import net.beholderface.oneironaut.casting.iotatypes.DimIota
+import io.github.real_septicake.hexxyplanes.forge.getExit
 import net.minecraft.server.level.ServerPlayer
+import org.arcticquests.dev.oneironaut.oneironautt.casting.iotatypes.DimIota
 
 object OpExitBreakdown : ConstMediaAction {
     override val argc = 0

@@ -21,13 +21,13 @@ architectury-loom = { require="[1.7, 1.8[" }
 fabric-loader = "0.16.7"
 fabric-api = "0.87.0+1.20.1"
 
-forge = "1.20.1-47.2.0"
+forge = "1.20.1-47.4.15"
 forge-dependency = "47" # for mods.toml
 
 # mods
 
 # 0.11.2-pre-701 corresponds to the build of 0.11.2 on CurseForge/Modrinth
-hexcasting = "0.11.2"
+hexcasting = "0.11.3"
 # FIXME: this should be 0.11.2, but that breaks the dev environment
 hexcasting-dependency = "0.11.1"
 paucal = "0.6.0-pre-118"
@@ -47,6 +47,10 @@ modMenu = "7.1.0"
 inline = "1.20.1-1.0.1"
 
 caelus = "3.1.0+1.20"
+
+oneironaut-forge = "1.0.4"
+
+moreiotas = "0.1.1"
 
 # other dependencies
 
@@ -84,6 +88,7 @@ hexcasting-fabric = { module="at.petra-k.hexcasting:hexcasting-fabric-1.20.1", v
 hexcasting-forge  = { module="at.petra-k.hexcasting:hexcasting-forge-1.20.1", version.ref="hexcasting" }
 
 hexal-fabric = { module="ram.talia.hexal:hexal-fabric-1.20.1", version.ref="hexal" }
+hexal-forge = { module="ram.talia.hexal:hexal-forge-1.20.1", version.ref="hexal" }
 
 hexpose-fabric = { module="miyucomics.hexpose:hexpose", version.ref="hexpose" }
 playeranim-fabric = { module="dev.kosmx.player-anim:player-animation-lib-fabric", version.ref="playeranim" }
@@ -113,6 +118,9 @@ caelus = { module="top.theillusivec4.caelus:caelus-forge", version.ref="caelus" 
 
 inline-fabric = { module="com.samsthenerd.inline:inline-fabric", version.ref="inline" }
 inline-forge  = { module="com.samsthenerd.inline:inline-forge", version.ref="inline" }
+
+oneironaut-forge = { module="maven.modrinth:oneironaut-reforged", version.ref="oneironaut-forge" }
+moreiotas-forge = { module="ram.talia.moreiotas:moreiotas-forge-1.20.1", version.ref="moreiotas" }
 
 asm          = { module="org.ow2.asm:asm", version.ref="asm" }
 asm-analysis = { module="org.ow2.asm:asm-analysis", version.ref="asm" }

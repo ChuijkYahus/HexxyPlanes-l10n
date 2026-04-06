@@ -75,6 +75,11 @@ dependencies {
     modLocalRuntime(libs.caelus)
     modLocalRuntime(libs.inline.forge) { isTransitive = false }
 
+    modImplementation(libs.oneironaut.forge)
+    modLocalRuntime(libs.hexal.forge)
+    modLocalRuntime(libs.moreiotas.forge) { isTransitive = false }
+    modLocalRuntime("maven.modrinth:geckolib:qq4z76WF")
+
     modApi(libs.clothConfig.forge)
 
     libs.mixinExtras.common.also {
